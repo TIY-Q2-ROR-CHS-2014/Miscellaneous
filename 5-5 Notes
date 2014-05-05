@@ -1,0 +1,143 @@
+# jQuery Selectors
+
+<div>
+  <ul>
+    <li class="one"></li>
+    <li class="two"></li>
+    <li class="three"></li>
+  </ul>
+</div>
+
+$("div").find(".three")
+[<li class="three"></li>]
+
+$("div li").not(".three")
+[ <li class="one"></li>, <li class="two"></li> ]
+
+# Document Ready
+
+$(document).ready( )
+
+Gets the javascript ready to run.
+
+# Callback Functions
+$(document).ready( function() {
+  
+})
+
+function() {
+  
+} is a callback function!
+
+It's also anonymous because it doesn't have a name.
+
+# Pagination
+
+With a list of 100 objects in ruby, use a slice!
+[1,2,3,4,5,6,7,8,9, 10]
+
+var1 = 1
+var2 = 2
+var3 = 3
+
+var1 = 4
+var2 = 5
+var3 = 6
+
+var1 = 7
+var2 = 8
+var3 = 9
+
+var1 = 10
+var2 = nil
+var3 = nil
+
+object_array.each_slice(3) do |var1, var2, var3|
+  = var1.name if var1
+
+What Rich did was display the objects in the first loop, and made everything else hidden.
+
+When you click a link, he had a click event on each link. It would hide or show the patients that belonged to different pages.
+
+Showed the first 10 (based on the slice number).
+
+# .show() .hide()
+
+You can hide and show ANYTHING. Regardless of what element it is. If you hide a div, everything will disappear causing the remaining elements to move up. !!!!There is NO space taken by a hidden element.!!!!
+
+# Inspect Element - Browser
+
+This is an easy way to find certain things on the page. If you inspect element and there are no errors, the terminal (and/or your jQuery selectors!) are a good place to look to see what's happening.
+
+Right click > Inspect element
+
+# javascript:void(0)
+
+This keeps you from jumping around on a page.
+
+# api.jquery.com
+
+http://api.jquery.com/
+
+#### THIS IS BAD!
+
+.css("background-color", "red")
+
+#### This is correct:
+
+in css:
+.red_background {
+  background-color: red;
+}
+
+in JS:
+.addClass("red_background")
+.removeClass("red_background")
+.toggleClass("red_background")
+
+# Using an alert
+
+Used an alert in multiple pages to figure out what pages the javascript is being loaded in. At the top of the file to make sure it loaded.
+
+var when_page_is_loaded = function() {
+  alert("Hey dude!");
+}
+
+$(document).ready(when_page_is_loaded);
+$(document).on("page:load", when_page_is_loaded);
+
+# Chaining
+
+You can call multiple methods on one line! It helps declutter the code.
+
+$(".test_1_2").find(".dude_man").hide();
+
+# console.log
+
+console.log will post your text to the javascript console. If you are debugging a JS file, throw console.logs in there to see what's happening.
+
+console.log("Hi");
+
+$(selector).click(function(){
+  console.log("Hi 1");
+});
+
+# If you're using Firefox
+
+Use firebug!
+
+http://getfirebug.com/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
