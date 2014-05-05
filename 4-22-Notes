@@ -1,0 +1,84 @@
+# Naming models and controllers
+# Controllers are plural
+#  (except for home)
+# Models are singular
+# If you don't generate the model/controller from the console, you will undoubtedly forget other files
+
+rails g
+rails generate model hospital name:string description:text
+rails generate controller hospitals
+
+# This is important!
+# This is including a lot of Rails javascript code to enable things to happen on links:
+<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+
+# In patient controller on the homework, we had to do a before filter to find the hospital.
+# Since the medication controller is inside the patient, you still have to find those objects.
+
+resources :hospitals do
+  resources :patients do
+    resources :medications
+    # Patch stuff from other lab
+  end
+end
+
+# To debug the route links:
+# First make sure your path is correct - rake routes
+# You make sure you are passing in all of the correct variables
+# Check the error to see what variables are nil inside the error message.
+
+
+# Passing any parameter into a path:
+redirect_to root_path(q: "Sort by loation")
+= link_to new_hospitals_patient_path(@hospital, q: "Sort by location", name: "Chisolm")
+#Inside the controller
+def index
+  if params[:q] == "Sort by location"
+    # do whatever
+  else
+    # do what you would have done
+  end
+end
+
+# Joshua broke some shit.
+# rvm implode
+# Removes/Uninstalls RVM
+# This will remove all gemsets, etc.
+
+# When you mess up tables on first configuration:
+# When you mess up a migration and want to rollback, /yell YOU NEED TO ROLLBACK FIRST BEFORE YOU CHANGE MIGRATION FILES
+
+rake db:drop
+rake db:create
+rake db:migrate
+# snake case
+rails generate migration rename_column_on_patients
+rails generate migration RenameColumnOnPatients
+rename_column :patients, :workflow_stte, :workflow_state
+
+# If you type "history" in your terminal, and you can see everything you have submitted in your terminal
+
+# Adding classes to haml files:
+= link_to "Dude man", "/", class: "dudeman_class btn btn-primary"
+= form_for @patients, html: { class: "custom_class_here" } do |f|
+= form_for @patients, :html => { :class => "custom_class_here" } do |f|
+
+# If you create a plural model:
+rails destroy model patients
+rails destroy controller patient
+
+# Scaffold
+# Generates model, views, controller
+rails g scaffold Pub name:string address:string description:text
+rails g scaffold Patron name:string address:string description:text pub:references
+# References is belongs_to
+
+# Forms with relationships
+= form_for [@hospital, @patient, @medication] do |f|
+
+
+
+
+
+
+
