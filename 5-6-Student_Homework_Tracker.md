@@ -4,7 +4,7 @@ We are going to be creating a project to keep track of your homework submissions
 
 There will also be an admin user (the instructor!) that is there to grade the homework assignments as complete or incomplete. The instructor should register just like any other user. They will have to select locations/cohorts. The difference is there should be an admin interface. Any pre-existing admin should be able to edit any user and make them an admin.
 
-As a student, when submitting homework, I should be able to <incomplete>
+As a student, when submitting homework, I should be able to fill out all necessary information as well as adding any links deemed necessary. I should be able to edit this homework as well if the instructor requests additional information.
 
 When viewing the homework, there should be a comment stream. The student and instructor should be able to communicate with each other via this comment stream (very similar to GitHub pull requests). When a comment is created, an email needs to be sent to the opposite user. For example, when a student creates a comment, an email message needs to be send to the instructor. When an instructor creates a comment, an email needs to be sent to the student. The email needs to contain the content of the comment. 
 
