@@ -2,7 +2,9 @@
 
 We are going to be creating a project to keep track of your homework submissions. You will have user authentication to control user homework submissions. A user will submit many assignments as well. The format of the data will be based on Iron Yard location. I should be able to make as many TIY locations as I want. Each location will also have an unlimited number of classes. For instance, if we open a back-end class in the future using Clojure, I should be able to add that as a cohort. Each student (during user registration) should be able to select multiple locations/cohorts to assign themselves to.
 
-There will also be an admin user (the instructor!) that is there to grade the homework assignments as complete or incomplete. The instructor should register just like any other user. They will have to select locations/cohorts. The difference is there should be an admin interface. Any pre-existing admin should be able to edit any user and make them an admin.
+There will also be an admin user (the instructor/TA!) that is there to grade the homework assignments as complete or incomplete. The instructor should register just like any other user. They will have to select locations/cohorts. The difference is there should be an admin interface. Any pre-existing admin should be able to edit any user and make them an admin.
+
+When an instructor/TA views a cohort, they should be able to see all students and homeworks for the cohorts they are assigned to. When they click into a homework assignment, they should be able to view the comment stream and add whatever they deem necessary. If an additional student views the cohort, they should be able to see the assignments, BUT NOT THE HOMEWORK SUBMISSIONS. https://github.com/ryanb/cancan - That gem may help with that
 
 As a student, when submitting homework, I should be able to fill out all necessary information as well as adding any links deemed necessary. I should be able to edit this homework as well if the instructor requests additional information.
 
