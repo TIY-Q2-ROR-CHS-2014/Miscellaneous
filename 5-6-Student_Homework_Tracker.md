@@ -6,6 +6,8 @@ There will also be an admin user (the instructor/TA!) that is there to grade the
 
 When an instructor/TA views a cohort, they should be able to see all students and homeworks for the cohorts they are assigned to. When they click into a homework assignment, they should be able to view the comment stream and add whatever they deem necessary. If an additional student views the cohort, they should be able to see the assignments, BUT NOT THE HOMEWORK SUBMISSIONS. https://github.com/ryanb/cancan - That gem may help with that
 
+A instructor/TA/admin user should be able to create homework assignments. The students will have submissions to that specific homework assignment. Each student can only submit ONCE per submission. Students should be able to edit their submissions.
+
 As a student, when submitting homework, I should be able to fill out all necessary information as well as adding any links deemed necessary. I should be able to edit this homework as well if the instructor requests additional information. Once the homework is submitted, only the instructor should be able to change it's workflow state.
 
 When viewing the homework, there should be a comment stream. The student and instructor should be able to communicate with each other via this comment stream (very similar to GitHub pull requests). When a comment is created, an email needs to be sent to the opposite user. For example, when a student creates a comment, an email message needs to be send to the instructor. When an instructor creates a comment, an email needs to be sent to the student. The email needs to contain the content of the comment. 
