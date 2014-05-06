@@ -26,5 +26,6 @@ Requirements:
     - https://github.com/ryanb/nested_form - This gem will help you guys out here
     - https://coderwall.com/p/qwx3qa
   - Description
+- Comment Stream
 - 100% Styled. This MUST look good! This is going to be huge on your portfolio
 
